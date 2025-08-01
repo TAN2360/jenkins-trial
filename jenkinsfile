@@ -1,0 +1,15 @@
+pipeline {
+	agent any
+	stages{
+		stage('Pull Repo'){
+			steps{
+				echo 'cloned repo from github!'
+			}
+		}
+		stage ('run script'){
+			steps{
+				sh './script.sh'
+			}
+		}
+	}
+}
